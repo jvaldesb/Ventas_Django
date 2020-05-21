@@ -1,0 +1,34 @@
+class BillList(generics.ListAPIView):
+    queryset = models.Bill.objects.raw("SELECT * FROM core_bill")
+    serializer_class = seri.BillSerializer
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        serializerd = seri.BillSerializer(list(queryset), many=True)
+        return response.Response(serializerd.data)
+
+
+
+class BillList(generics.ListAPIView):
+    queryset = models.Bill.objects.raw("SELECT * FROM core_bill")
+    serializer_class = seri.BillSerializer
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        serializerd = seri.BillSerializer(list(queryset), many=True)
+        return response.Response(serializerd.data)
+
+
+class BillViewset(views.APIView):
+
+    def get(self, request, format=None):
+        bill = models.Bill.objects.raw("SELECT * FROM core_bill")
+        serializer = seri.BillSerializer(bill, many=True)
+        return response.Response(serializer.data)
+
+    def post(self, request, format=None):
+        serializer = seri.BillSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return response.Response(serializer.data, status=status.HTTP_201_CREATED)
+        return response.Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
