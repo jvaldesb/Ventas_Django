@@ -42,7 +42,7 @@ class Bill(models.Model):
         verbose_name_plural = 'Facturas'
 
     def __str__(self):
-        return "F# " + str(self.id) + " " + self.company_name + " " + self.clien_id.document
+        return "F# " + str(self.id) + " " + self.company_name + " " + str(self.client_id)
 
 
 class Attribute(models.Model):
