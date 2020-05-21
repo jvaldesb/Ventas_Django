@@ -2,6 +2,8 @@
 ___________________________________
 >API desarrollada por Julián Valdés
 
+>>Adjunto coleccion PostMAn con los endpoint.
+
 ## INFORMACIÓN
 
 Esta es una API desarrollada para la prueba de Quick Smart: cuenta con todos los métodos como **GET**, **HEAD**, **POST**, **PUT**, **DELETE** entre otras. Por temas de tiempo, el desarrollo se usaron metodos abstractos.
