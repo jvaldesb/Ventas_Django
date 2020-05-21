@@ -26,18 +26,18 @@ class AttributeSerializer(serializers.ModelSerializer):
     class Meta:
         # Contenedor de metadatos
         model = models.Attribute
-        field = '__all__'
+        fields = '__all__'
 
 class ProductSerializer(serializers.ModelSerializer):
     # Clase clientes que hereda del la clase ModelSerializer
     class Meta:
         # Contenedor de metadatos
         model = models.Product
-        field = '__all__'
+        fields = '__all__'
 
 class BillProductSerializer(serializers.ModelSerializer):
     # Clase clientes que hereda del la clase ModelSerializer
     class Meta:
         # Contenedor de metadatos
         model = models.BillProduct
-        field = '__all__'
+        fields = '__all__'
