@@ -18,7 +18,7 @@ class BillSerializer(serializers.ModelSerializer):
     class Meta:
         # Contenedor de metadatos
         model = models.Bill
-        field = '__all__'
+        fields = '__all__'
 
 
 class AttributeSerializer(serializers.ModelSerializer):
