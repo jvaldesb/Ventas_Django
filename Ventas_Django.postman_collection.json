@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "bcced65f-c00a-447d-ae5f-8133a3e727ed",
+		"name": "Ventas_Django",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/auth/jwt/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"jwt",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Set",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTkwMDc5NjY5LCJqdGkiOiI4MGU5YWZjY2Q1Njk0MjM3ODM2NGFmOTU4OGI0N2U1MyIsInVzZXJfaWQiOjF9.SBbSFqzti1xx1YC7e4FtonEC7ApAXkDqrEqP5kt9dyU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "OPTIONS",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document_type",
+							"value": "CC",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"value": "1010240304",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "NAtaly",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "BEltran",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nbeltranc@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/client/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Set",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTkwMDgwMDMyLCJqdGkiOiI0YTVlMTMwNDQ0NzE0MDVhYTIwODIzNzIxOWU0Zjk0ZiIsInVzZXJfaWQiOjF9.Q79ElyrYikfAaG0gaWOiAXdO6USBRH4VQbQgQBk2Gxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/bill",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"bill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Set",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTkwMDgwMDMyLCJqdGkiOiI0YTVlMTMwNDQ0NzE0MDVhYTIwODIzNzIxOWU0Zjk0ZiIsInVzZXJfaWQiOjF9.Q79ElyrYikfAaG0gaWOiAXdO6USBRH4VQbQgQBk2Gxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "document",
+							"value": "1026302600",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/product",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute Set",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTkwMDgwMDMyLCJqdGkiOiI0YTVlMTMwNDQ0NzE0MDVhYTIwODIzNzIxOWU0Zjk0ZiIsInVzZXJfaWQiOjF9.Q79ElyrYikfAaG0gaWOiAXdO6USBRH4VQbQgQBk2Gxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "document",
+							"value": "1026302600",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/attribute",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"attribute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BillProduct Set",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTkwMDgwMDMyLCJqdGkiOiI0YTVlMTMwNDQ0NzE0MDVhYTIwODIzNzIxOWU0Zjk0ZiIsInVzZXJfaWQiOjF9.Q79ElyrYikfAaG0gaWOiAXdO6USBRH4VQbQgQBk2Gxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "document",
+							"value": "1026302600",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/billproduct",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"billproduct"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
