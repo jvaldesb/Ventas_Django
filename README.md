@@ -129,9 +129,8 @@ Use este grupo de metodos para crear, eliminar, actualizar, y renderizar un atri
 **METODOS**: ``POST, GET, PUT, DELETE, HEAD, OPTIONS`` 
 ```
 {
-    "id": 1,
-    "attribute": "Color",
-    "value": "Dorado"
+    "attribute": "",
+    "value": ""
 }
 ```
 
@@ -142,9 +141,8 @@ Use este grupo de metodos para crear, eliminar, actualizar, y renderizar product
 **METODOS**: ``POST, GET, PUT, DELETE, HEAD, OPTIONS`` 
 ```
 {
-    "id": 1,
-    "bill_id": 1,
-    "product_id": 1
+    "bill_id": ,
+    "product_id": 
 }
 ```
 
